@@ -1,0 +1,31 @@
+<html ng-app="myApp">
+	<head>
+		<title>Contact List App</title>
+		<style type="text/css"></style>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+	</head>
+	<body>
+		<div class="container" ng-controller="AppCtrl">
+			<h1>Contact List App</h1>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Contact No.</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="contact in contactlist">
+						<td>{{contact.name}}</td>
+						<td>{{contact.email}}</td>
+						<td>{{contact.number}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+		<script src="./controllers/controller.js"></script>
+	</body>
+</html>
